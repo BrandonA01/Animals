@@ -36,7 +36,7 @@ public class Main {
             }
             System.out.println("Is the bat alive? " + b.isAlive());       //Check to see if it's alive
             System.out.println("Kill Count: " + c.getKills());          //Amount of kills the cat has
-            //System.out.println(c.eat());                                //Cat proceeds to eat the Bat
+            System.out.println(c.eat());                                //Cat proceeds to eat the Bat
 
             Animal c3 = c.breed(c2);
             if (c3 != null) {
