@@ -59,8 +59,8 @@ public abstract class Animal {
         } finally {
             return babyAnimal;
         }
-
-        public void die(){
+    }
+    public void die(){
         alive = false;
     }
 
