@@ -55,8 +55,8 @@ public class CatTest {
         assertEquals("Not Moving", testCat.move(), "IT'S MOVING! Zombie Cats.");
     }
     @Test
-    public void get_cat_eat(){
+    public void get_cat_eating(){
         Cat testCat = new Cat(true, "Black");
-        assertEquals("Shears off chunks of meat", testCat.eat(), "IT'S MOVING! Zombie Cats.");
+        assertEquals("Shears off chunks of meat", testCat.eat(), "It's not eating.");
     }
 }
