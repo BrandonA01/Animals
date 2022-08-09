@@ -1,8 +1,5 @@
 package com.TSI.Allen.Brandon;
 
-import java.util.ArrayList;
-import java.util.Random;
-
 public final class Cat extends Mammal{
 
     private String name;
