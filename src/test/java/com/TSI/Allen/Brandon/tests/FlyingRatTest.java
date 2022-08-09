@@ -9,9 +9,12 @@ public class FlyingRatTest {
     public void test_pigeon_eats(){
         FlyingRat frTest = new FlyingRat(true, 4, "Grey", 120);
         assertEquals("Pecks at Greggs Pasty", frTest.eat(), "Can't eat pasty");
-        frTest.setPasties_eaten(5000);
-        assertEquals(5000, frTest.getPasties_eaten(), "Can't eat pasty");
     }
+    @Test
+    public void test_pigeon_set_pasties(){
+        FlyingRat frTest = new FlyingRat(true, "Grey");
+        frTest.setPasties_eaten(5000);
+        assertEquals(5000, frTest.getPasties_eaten(), "Can't eat pasty");    }
     @Test
     public void test_pigeon_flying(){
         FlyingRat frTest = new FlyingRat(true, 4, "Grey");
