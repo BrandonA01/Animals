@@ -1,6 +1,6 @@
-package com.TSI.Allen.Brandon.tests;
-import com.TSI.Allen.Brandon.Bat;
-import com.TSI.Allen.Brandon.Cat;
+package com.TSI.tests;
+import com.TSI.Bat;
+import com.TSI.Cat;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

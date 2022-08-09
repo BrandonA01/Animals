@@ -1,6 +1,6 @@
-package com.TSI.Allen.Brandon.tests;
+package com.TSI.tests;
 
-import com.TSI.Allen.Brandon.Penguin;
+import com.TSI.Penguin;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

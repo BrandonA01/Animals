@@ -1,5 +1,5 @@
-package com.TSI.Allen.Brandon.tests;
-import com.TSI.Allen.Brandon.FlyingRat;
+package com.TSI.tests;
+import com.TSI.FlyingRat;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

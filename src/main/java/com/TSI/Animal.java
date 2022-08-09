@@ -1,30 +1,34 @@
-package com.TSI.Allen.Brandon;
+package com.TSI;
 
-import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
+import java.util.logging.Logger;
+import static java.util.logging.Level.INFO;
 
 public abstract class Animal {
 
     private boolean alive;
     private int age;
     private String colour;
-    private int HP;
-    private int Kills;
+    private int hp;
+    private int kills;
 
-    public Animal(boolean alive, int age, String colour, int HP){
+    private static final Logger LOGGER = Logger.getLogger(String.valueOf(Animal.class));
+    private static final String SLEEP = "Sleeping";
+    private static final String POOP = "Pooping";
+
+    protected Animal(boolean alive, int age, String colour, int hp){
         this.alive = alive;
         this.age = age;
         this.colour = colour;
-        this.HP = HP;
+        this.hp = hp;
     }
 
-    public Animal(boolean alive, int age, String colour){
+    protected Animal(boolean alive, int age, String colour){
         this.alive = alive;
         this.age = age;
         this.colour = colour;
     }
 
-    public Animal(boolean alive, String colour){
+    protected Animal(boolean alive, String colour){
         this.alive = alive;
         this.colour = colour;
     }
@@ -43,14 +47,14 @@ public abstract class Animal {
     public abstract String breathe();
 
     public String sleep(){
-        return "Sleeping";
+        return SLEEP;
     }
 
     public String poop(){
-        return "Pooping";
+        return POOP;
     }
 
-    public <T extends Animal> Animal breed(Animal partner){
+    public Animal breed(Animal partner){
 
         Animal babyAnimal;
         if (this.getClass().equals(partner.getClass())){
@@ -59,7 +63,7 @@ public abstract class Animal {
                 return babyAnimal;
             }
             catch(Exception e){
-                System.out.println("Incompatible types of animals");
+                LOGGER.log(INFO,"Incompatible types of animals");
                 return null;
             }
         }
@@ -94,24 +98,24 @@ public abstract class Animal {
     }
 
     public int getHP() {
-        return HP;
+        return hp;
     }
 
-    public void setHP(int HP) {
-        this.HP = HP;
+    public void setHP(int hp) {
+        this.hp = hp;
     }
 
     public int getKills() {
-        return Kills;
+        return kills;
     }
 
     public void setKills(int kills) {
-        Kills = kills;
+        kills = kills;
     }
 
     public Animal kill(Animal animal) {
         animal.die();
-        Kills++;
+        kills++;
         return animal;
     }
 }

@@ -1,6 +1,4 @@
-package com.TSI.Allen.Brandon;
-
-import java.util.ArrayList;
+package com.TSI;
 
 public final class Bat extends Mammal{
 

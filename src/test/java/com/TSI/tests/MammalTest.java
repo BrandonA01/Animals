@@ -1,8 +1,8 @@
-package com.TSI.Allen.Brandon.tests;
+package com.TSI.tests;
 
-import com.TSI.Allen.Brandon.Bat;
-import com.TSI.Allen.Brandon.Cat;
-import com.TSI.Allen.Brandon.Mammal;
+import com.TSI.Bat;
+import com.TSI.Cat;
+import com.TSI.Mammal;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

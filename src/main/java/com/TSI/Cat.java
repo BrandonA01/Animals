@@ -1,4 +1,4 @@
-package com.TSI.Allen.Brandon;
+package com.TSI;
 
 public final class Cat extends Mammal{
 
