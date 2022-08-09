@@ -110,7 +110,7 @@ public abstract class Animal {
     }
 
     public void setKills(int kills) {
-        kills = kills;
+        this.kills = kills;
     }
 
     public Animal kill(Animal animal) {
