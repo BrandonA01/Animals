@@ -1,5 +1,6 @@
 package com.TSI.Allen.Brandon.tests;
 
+import com.TSI.Allen.Brandon.Bat;
 import com.TSI.Allen.Brandon.Cat;
 import com.TSI.Allen.Brandon.Mammal;
 import org.junit.jupiter.api.Test;
@@ -14,7 +15,7 @@ public class MammalTest {
     }
     @Test
     public void get_mammal_breathing(){
-        Mammal testCat = new Cat(true, "Black");
-        assertEquals("Breathing...", testCat.breathe(), "Mammal is being asphyxiated");
+        Mammal testBat = new Bat(true, 4, "Black", 100);
+        assertEquals("Breathing...", testBat.breathe(), "Mammal is being asphyxiated");
     }
 }
