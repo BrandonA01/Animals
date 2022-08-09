@@ -21,10 +21,6 @@ public final class Bat extends Mammal{
         return "Eats insect";
     }
 
-    @Override
-    public ArrayList<Animal> breed(Animal animal) {
-        return null;
-    }
 
     public int getInsects_eaten() {
         return insects_eaten;

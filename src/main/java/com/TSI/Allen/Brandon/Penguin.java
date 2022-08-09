@@ -18,9 +18,4 @@ public final class Penguin extends Bird{
     public String eat() {
         return "Swallows food whole";
     }
-
-    @Override
-    public ArrayList<Animal> breed(Animal animal) {
-        return null;
-    }
 }

@@ -50,7 +50,21 @@ public abstract class Animal {
         return "Pooping";
     }
 
-    public abstract ArrayList<Animal> breed(Animal animal);
+    public <T extends Animal> Animal breed(Animal partner){
+
+        Animal babyAnimal;
+        if (this.getClass().equals(partner.getClass())){
+            try {
+                babyAnimal = partner.getClass().getDeclaredConstructor().newInstance();
+                return babyAnimal;
+            }
+            catch(Exception e){
+                System.out.println("Incompatible types of animals");
+                return null;
+            }
+        }
+        return null;
+    }
     public void die(){
         alive = false;
     }

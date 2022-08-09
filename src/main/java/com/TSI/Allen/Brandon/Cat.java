@@ -27,9 +27,9 @@ public final class Cat extends Mammal{
         return "Shears off chunks of meat";
     }
 
-    @Override
+    /*@Override
     public ArrayList<Animal> breed(Animal animal) {
-        /*ArrayList<Animal> kittens = new ArrayList<>();
+        ArrayList<Animal> kittens = new ArrayList<>();
         try{
             int min = (int) Math.ceil(1);
             int max = (int) Math.floor(8);
@@ -47,9 +47,9 @@ public final class Cat extends Mammal{
             System.out.println("Incompatible types");
         }
 
-        return kittens;*/
+        return kittens;
         return null;
-    }
+    }*/
 
 
     public Animal attack(Animal animal){

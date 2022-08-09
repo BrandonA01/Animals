@@ -21,11 +21,6 @@ public final class FlyingRat extends Bird implements Flying{
         return "Pecks at Greggs Pasty";
     }
 
-    @Override
-    public ArrayList<Animal> breed(Animal animal) {
-        return null;
-    }
-
     public String takeOff() {
         return "Flapping";
     }
