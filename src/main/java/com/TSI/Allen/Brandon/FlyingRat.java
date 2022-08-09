@@ -4,6 +4,14 @@ import java.util.ArrayList;
 
 public final class FlyingRat extends Bird implements Flying{
 
+    public int getPasties_eaten() {
+        return pasties_eaten;
+    }
+
+    public void setPasties_eaten(int pasties_eaten) {
+        this.pasties_eaten = pasties_eaten;
+    }
+
     private int pasties_eaten;
 
     public FlyingRat(boolean alive, int age, String colour, int HP) {
