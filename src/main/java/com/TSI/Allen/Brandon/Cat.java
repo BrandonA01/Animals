@@ -47,6 +47,7 @@ public final class Cat extends Mammal{
             System.out.println("Incompatible types");
         }
 
+        return kittens;
     }
 
 
