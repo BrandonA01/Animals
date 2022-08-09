@@ -8,12 +8,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class CatTest {
     @Test
     public void test_get_cat_name(){
-        Cat testCat = new Cat(true, 4, "Nala", "Black");
+        Cat testCat = new Cat(true, 4, "Nala", "Black", 100);
         assertEquals("Nala", testCat.getName(), "Not the same name");
+        testCat.setName("Dave");
+        assertEquals("Dave", testCat.getName(), "Not the same name");
     }
     @Test
     public void test_is_cat_alive(){
-        Cat testCat = new Cat(true, 4, "Nala", "Black");
+        Cat testCat = new Cat(true, "Nala", "Black");
         assertTrue(testCat.isAlive(), "Nala is dead");
         testCat.die();
         assertFalse(testCat.isAlive(), "Nala is alive");
@@ -25,7 +27,7 @@ public class CatTest {
     }
     @Test
     public void test_get_cat_colour(){
-        Cat testCat = new Cat(true, 4, "Nala", "Black");
+        Cat testCat = new Cat(false,"Black");
         assertEquals("Black", testCat.getColour(), "Not the same colour");
     }
     @Test
@@ -51,5 +53,10 @@ public class CatTest {
         assertEquals("Moving", testCat.move(), "Not moving, maybe dead?");
         testCat.die();
         assertEquals("Not Moving", testCat.move(), "IT'S MOVING! Zombie Cats.");
+    }
+    @Test
+    public void get_cat_eat(){
+        Cat testCat = new Cat(true, "Black");
+        assertEquals("Shears off chunks of meat", testCat.eat(), "IT'S MOVING! Zombie Cats.");
     }
 }
