@@ -1,5 +1,7 @@
 package com.TSI.Allen.Brandon;
 
+import java.util.ArrayList;
+
 public final class FlyingRat extends Bird implements Flying{
 
     private int pasties_eaten;
@@ -17,6 +19,11 @@ public final class FlyingRat extends Bird implements Flying{
     public String eat() {
         pasties_eaten++;
         return "Pecks at Greggs Pasty";
+    }
+
+    @Override
+    public ArrayList<Animal> breed(Animal animal) {
+        return null;
     }
 
     public String takeOff() {

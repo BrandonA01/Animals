@@ -1,6 +1,7 @@
 package com.TSI.Allen.Brandon;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 
 public abstract class Animal {
 
@@ -49,17 +50,7 @@ public abstract class Animal {
         return "Pooping";
     }
 
-    public Animal breed(Animal partner) {
-        Animal babyAnimal = null;
-        try {
-            babyAnimal = partner.getClass().getDeclaredConstructor().newInstance();
-        }
-        catch(Exception e){
-
-        } finally {
-            return babyAnimal;
-        }
-    }
+    public abstract ArrayList<Animal> breed(Animal animal);
     public void die(){
         alive = false;
     }

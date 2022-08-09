@@ -1,5 +1,7 @@
 package com.TSI.Allen.Brandon;
 
+import java.util.ArrayList;
+
 public final class Penguin extends Bird{
 
     public Penguin(boolean alive, int age, String colour, int HP) {
@@ -15,5 +17,10 @@ public final class Penguin extends Bird{
     @Override
     public String eat() {
         return "Swallows food whole";
+    }
+
+    @Override
+    public ArrayList<Animal> breed(Animal animal) {
+        return null;
     }
 }

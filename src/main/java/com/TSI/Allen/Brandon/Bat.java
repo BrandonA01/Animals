@@ -1,5 +1,7 @@
 package com.TSI.Allen.Brandon;
 
+import java.util.ArrayList;
+
 public final class Bat extends Mammal{
 
     private int insects_eaten;
@@ -17,6 +19,11 @@ public final class Bat extends Mammal{
     public String eat() {
         insects_eaten++;
         return "Eats insect";
+    }
+
+    @Override
+    public ArrayList<Animal> breed(Animal animal) {
+        return null;
     }
 
     public int getInsects_eaten() {

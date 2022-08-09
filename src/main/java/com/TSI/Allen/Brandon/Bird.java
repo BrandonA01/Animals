@@ -16,7 +16,5 @@ public abstract class Bird extends Animal {
         return "Breathing...";
     }
 
-    public String breed(){
-        return "Lay Eggs";
-    }
+    public abstract String eat();
 }
