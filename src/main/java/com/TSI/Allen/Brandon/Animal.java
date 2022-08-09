@@ -1,5 +1,7 @@
 package com.TSI.Allen.Brandon;
 
+import java.lang.reflect.InvocationTargetException;
+
 public abstract class Animal {
 
     private boolean alive;
@@ -47,9 +49,18 @@ public abstract class Animal {
         return "Pooping";
     }
 
-    public abstract String breed();
+    public Animal breed(Animal partner) {
+        Animal babyAnimal = null;
+        try {
+            babyAnimal = partner.getClass().getDeclaredConstructor().newInstance();
+        }
+        catch(Exception e){
 
-    public void die(){
+        } finally {
+            return babyAnimal;
+        }
+
+        public void die(){
         alive = false;
     }
 

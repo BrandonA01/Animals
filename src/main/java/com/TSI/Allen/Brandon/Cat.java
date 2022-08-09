@@ -37,7 +37,4 @@ public final class Cat extends Mammal{
         this.name = name;
     }
 
-    public Cat breed(Cat kitten){
-        return kitten;
-    }
 }
