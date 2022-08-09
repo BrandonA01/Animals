@@ -5,8 +5,15 @@ public final class Penguin extends Bird{
     public Penguin(boolean alive, int age, String colour, int HP) {
         super(alive, age, colour, HP);
     }
+    public Penguin(boolean alive, int age, String colour) {
+        super(alive, age, colour);
+    }
+    public Penguin(boolean alive, String colour) {
+        super(alive, colour);
+    }
 
+    @Override
     public String eat() {
-        return "Swallow fish whole";
+        return "Swallows food whole";
     }
 }

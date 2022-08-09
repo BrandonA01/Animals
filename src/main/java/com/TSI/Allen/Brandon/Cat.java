@@ -2,12 +2,22 @@ package com.TSI.Allen.Brandon;
 
 public final class Cat extends Mammal{
 
-    private int Kills;
     private String name;
 
     public Cat(boolean alive, int age, String name, String colour, int HP) {
         super(alive, age, colour, HP);
         this.name = name;
+    }
+    public Cat(boolean alive, int age, String name, String colour) {
+        super(alive, age, colour);
+        this.name = name;
+    }
+    public Cat(boolean alive, String name, String colour) {
+        super(alive, colour);
+        this.name = name;
+    }
+    public Cat(boolean alive, String colour) {
+        super(alive, colour);
     }
 
     public String eat() {
@@ -19,25 +29,15 @@ public final class Cat extends Mammal{
         return animal;
     }
 
-    public Animal kill(Animal animal) {
-        animal.die();
-        Kills++;
-        return animal;
-    }
-
-    public int getKills() {
-        return Kills;
-    }
-
-    public void setKills(int kills) {
-        Kills = kills;
-    }
-
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Cat breed(Cat kitten){
+        return kitten;
     }
 }

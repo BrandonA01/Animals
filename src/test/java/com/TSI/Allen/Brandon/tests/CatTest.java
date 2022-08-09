@@ -2,7 +2,8 @@ package com.TSI.Allen.Brandon.tests;
 import com.TSI.Allen.Brandon.Bat;
 import com.TSI.Allen.Brandon.Cat;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CatTest {
     @Test
@@ -13,9 +14,9 @@ public class CatTest {
     @Test
     public void test_is_cat_alive(){
         Cat testCat = new Cat(true, 4, "Nala", "Black");
-        assertEquals(true, testCat.isAlive(), "Nala is dead");
+        assertTrue(testCat.isAlive(), "Nala is dead");
         testCat.die();
-        assertEquals(false, testCat.isAlive(), "Nala is alive");
+        assertFalse(testCat.isAlive(), "Nala is alive");
     }
     @Test
     public void test_get_cat_age(){
@@ -31,10 +32,24 @@ public class CatTest {
     public void test_cat_kills(){
         Cat testCat = new Cat(true, 4, "Nala", "Black");
         Bat testBat = new Bat(true, 4, "Grey", 100);
-        assertEquals(true, testBat.isAlive(), "Bat is not alive");
+        assertTrue(testBat.isAlive(), "Bat is not alive");
         assertEquals(0, testCat.getKills(), "Cat should have 0 kills");
         testCat.kill(testBat);
-        assertEquals(false, testBat.isAlive(), "Bat is alive");
+        assertFalse(testBat.isAlive(), "Bat is alive");
         assertEquals(1, testCat.getKills(), "Cat should have 1 kill ");
+    }
+    @Test
+    public void test_cat_attack(){
+        Cat testCat = new Cat(true, 4, "Nala", "Black");
+        Bat testBat = new Bat(true, 4, "Grey", 100);
+        testCat.attack(testBat);
+        assertEquals(90, testBat.getHP(), "Cat attack was not effective");
+    }
+    @Test
+    public void get_cat_moving(){
+        Cat testCat = new Cat(true, "Black");
+        assertEquals("Moving", testCat.move(), "Not moving, maybe dead?");
+        testCat.die();
+        assertEquals("Not Moving", testCat.move(), "IT'S MOVING! Zombie Cats.");
     }
 }
