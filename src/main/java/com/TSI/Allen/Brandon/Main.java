@@ -39,10 +39,5 @@ public class Main {
         System.out.println("Kill Count: " + c.getKills());          //Amount of kills the cat has
         System.out.println(c.eat());                                //Cat proceeds to eat the Bat
 
-
-        ArrayList<Animal> kittens = c.breed(c2);
-        for(int i = 0; i<kittens.size(); i++){
-            System.out.println(kittens.get(i).getColour());
-        }
     }
 }
