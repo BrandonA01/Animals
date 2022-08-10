@@ -11,7 +11,7 @@ public class Main {
 
         //Scenario 1
 
-        System.out.println("-----Scenario 1-----");
+        /*System.out.println("-----Scenario 1-----");
         c.kill(fr);                                                 //Cat kills Pigeon
         System.out.println("Cat kills pigeon");
         System.out.println("Is the pigeon alive? " + fr.isAlive());       //Check to see if it's alive
@@ -41,6 +41,6 @@ public class Main {
                 c3.kill(c);
                 System.out.println(c3.getKills());
             }
-        }
+        }*/
     }
 }

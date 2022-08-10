@@ -55,19 +55,15 @@ public abstract class Animal {
     }
 
     public Animal breed(Animal partner){
-
         Animal babyAnimal;
-        if (this.getClass().equals(partner.getClass())){
-            try {
-                babyAnimal = partner.getClass().getDeclaredConstructor().newInstance();
-                return babyAnimal;
-            }
-            catch(Exception e){
-                LOGGER.log(INFO,"Incompatible types of animals");
-                return null;
-            }
+        try {
+            babyAnimal = partner.getClass().getDeclaredConstructor().newInstance();
+            return babyAnimal;
         }
-        return null;
+        catch(Exception e){
+            LOGGER.log(INFO,"Incompatible types of animals");
+            return null;
+        }
     }
     public void die(){
         alive = false;

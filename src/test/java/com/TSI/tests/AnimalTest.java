@@ -81,11 +81,11 @@ public class AnimalTest {
         testBat.die();
         assertEquals("Not Moving", testBat.move(), "Bat moves while dead");
     }
-    @Test
+    /*@Test
     public void test_animal_breed(){
         Bat testBat = new Bat(true, 4, "Black", 100);
         Bat testBat2 = new Bat(true, 4, "Black", 100);
         assertEquals(, testBat.breed(testBat2), "Cannot breed");
 
-    }
+    }*/
 }

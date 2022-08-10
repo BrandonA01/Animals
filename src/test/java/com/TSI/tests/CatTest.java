@@ -59,4 +59,11 @@ public class CatTest {
         Cat testCat = new Cat(true, "Black");
         assertEquals("Shears off chunks of meat", testCat.eat(), "It's not eating.");
     }
+    @Test
+    public void get_cat_breeding(){
+        Cat testCat = new Cat(true, "Black");
+        Cat testCat2 = new Cat(true, "Black");
+        Cat kitten = testCat.breed(testCat2);
+        assertEquals("Shears off chunks of meat", testCat.eat(), "It's not eating.");
+    }
 }

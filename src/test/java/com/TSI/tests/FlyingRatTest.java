@@ -22,4 +22,9 @@ public class FlyingRatTest {
         assertEquals("Gliding", frTest.flying(), "Not flying");
         assertEquals("Landed", frTest.land(), "Still Flying");
     }
+    @Test
+    public void test_pigeon_breathe(){
+        FlyingRat frTest = new FlyingRat(true, 4, "Grey");
+        assertEquals("Breathing...", frTest.breathe(), "Not breathing");
+    }
 }
